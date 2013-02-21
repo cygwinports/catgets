@@ -1,0 +1,14 @@
+NAME="catgets"
+VERSION=1.1
+RELEASE=2
+CATEGORY="Text"
+SUMMARY="catgets message catalog API"
+HOMEPAGE="http://www.gnu.org/software/libc/"
+SRC_URI="catgets-${VERSION}.tar.bz2"
+PATCH_URI="1.1-cygwin.patch"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake CC=${CC} CCLD=${CC} AR=${AR} OSTYPE=cygwin
+}

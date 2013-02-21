@@ -1,0 +1,13 @@
+--- origsrc/catgets-1.1/util/argp/argp-parse.c	2005-05-28 02:54:49.000000000 +0200
++++ src/catgets-1.1/util/argp/argp-parse.c	2012-05-03 16:04:34.092311660 +0200
+@@ -45,8 +45,10 @@ char *alloca ();
+ 
+ #include "catgets/getopt_int.h"
+ 
++#ifndef __CYGWIN__
+ const char * program_invocation_name = "???";
+ const char * program_invocation_short_name = "???";
++#endif
+ 
+ #ifndef _
+ /* This is for other GNU distributions with internationalized messages.
