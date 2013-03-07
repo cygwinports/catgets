@@ -5,7 +5,7 @@ CATEGORY="Text"
 SUMMARY="catgets message catalog API"
 HOMEPAGE="http://www.gnu.org/software/libc/"
 SRC_URI="catgets-${VERSION}.tar.bz2"
-PATCH_URI="1.1-cygwin.patch"
+PATCH_URI="1.1-cygwin.patch 1.1-cross-binutils.patch"
 
 src_compile() {
 	lndirs
