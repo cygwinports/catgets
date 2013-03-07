@@ -7,6 +7,10 @@ HOMEPAGE="http://www.gnu.org/software/libc/"
 SRC_URI="catgets-${VERSION}.tar.bz2"
 PATCH_URI="1.1-cygwin.patch 1.1-cross-binutils.patch"
 
+PKG_NAMES="catgets libcatgets1 libcatgets-devel"
+libcatgets1_CONTENTS="usr/bin/cygcatgets1.dll usr/share/doc/"
+libcatgets_devel_CONTENTS="usr/bin/gencat.exe usr/include/ usr/lib/"
+
 src_compile() {
 	lndirs
 	cd ${B}
